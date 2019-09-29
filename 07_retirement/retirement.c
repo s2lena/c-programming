@@ -6,9 +6,9 @@ struct retire_info {
   double contribution;
   double rate_of_return;
 };
-typedef struct retire_info retire_info;
+typedef struct retire_info _retire_info;
 
-void retirement (int startAge, double initial, retire_info working, retire_info retired) {
+void retirement (int startAge, double initial, _retire_info working, _retire_info retired) {
   int month = 12 - (working.months % 12);
   int retireAge  = (working.months / 12) + startAge;
   int endAge = (retired.months / 12) + retireAge;
@@ -36,12 +36,12 @@ int main(void) {
   int startAge = 27;
   double initial = 21345;
   
-  retire_info working;
+  _retire_info working;
   working.months = 489;
   working.rate_of_return = 0.045/12;
   working.contribution = 1000;
   
-  retire_info retired;
+  _retire_info retired;
   retired.months = 384;
   retired.rate_of_return = 0.01/12;
   retired.contribution = -4000;

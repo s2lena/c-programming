@@ -134,19 +134,19 @@ void print_card(card_t c) {
   }
   switch(suit_let) {
     case 'S':
-      temp.suit = SPADES;
+      temp.suit = 0;
       break;
     case 'H':
-      temp.suit = HEARTS;
+      temp.suit = 1;
       break;
     case 'D':
-      temp.suit = DIAMONDS;
+      temp.suit = 2;
       break;
     case 'C':
-      temp.suit = CLUBS;
+      temp.suit = 3;
       break;
     default:
-      temp.suit = NUM_SUITS;
+      temp.suit = 5;
       break;
   }
   return temp;

@@ -149,7 +149,6 @@ void print_card(card_t c) {
       temp.suit = NUM_SUITS;
       break;
   }
-  assert_card_valid(temp);
   return temp;
 }
 card_t card_from_num(unsigned c) {

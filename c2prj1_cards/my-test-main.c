@@ -12,7 +12,7 @@ int main(void) {
   printf("My suit is %c\n", suit_letter(c));
   print_card(c);
   card_t x = card_from_letters('8','H');
-  printf("For %d of %c \n", x.value, x.suit);
+  printf("For %d of %d\n", x.value, x.suit);
   card_t y = card_from_num(36);
   printf("For %d of %c \n", y.value, y.suit);
   

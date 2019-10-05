@@ -134,19 +134,19 @@ void print_card(card_t c) {
   }
   switch(suit_let) {
     case 'S':
-      temp.suit = SPADES;
+      temp.suit = 'S';
       break;
     case 'H':
-      temp.suit = HEARTS;
+      temp.suit = 'H';
       break;
     case 'D':
-      temp.suit = DIAMONDS;
+      temp.suit = 'D';
       break;
     case 'C':
-      temp.suit = CLUBS;
+      temp.suit = 'C';
       break;
     default:
-      temp.suit = NUM_SUITS;
+      temp.suit = 'N';
       break;
   }
   return temp;
@@ -154,16 +154,16 @@ void print_card(card_t c) {
 card_t card_from_num(unsigned c) {
   card_t temp;
   if(c >= 0 && c <= 12) {
-    temp.suit = 's';
+    temp.suit = 'S';
   } 
   if(c > 12 && c <= 25) {
-    temp.suit = 'h';
+    temp.suit = 'H';
   }
   if(c > 25 && c <= 38) {
-    temp.suit = 'd';
+    temp.suit = 'D';
   }
   if(c > 38 && c <= 51) {
-    temp.suit = 'c';
+    temp.suit = 'C';
   }
   temp.value = c % 13;
   if(temp.value == 0) {

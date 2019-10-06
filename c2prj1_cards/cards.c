@@ -74,7 +74,7 @@ char suit_letter(card_t c) {
     case CLUBS: x = 'C';
       break;
     case NUM_SUITS:
-      x = 'N';
+      x = '?';
       break;
   }
   return  x ;
@@ -83,7 +83,7 @@ char suit_letter(card_t c) {
 void print_card(card_t c) {
   int x = value_letter(c);
   char y = suit_letter(c);
-  printf("My card is %c%c\n",x,y);
+  printf("%c%c", x, y);
 }
 
  card_t card_from_letters(char value_let,char suit_let) {
@@ -92,90 +92,62 @@ void print_card(card_t c) {
     case '0':
       temp.value = 10;
       break;
-    case '2':
-      temp.value = 2;
-      break;
-    case '3':
-      temp.value = 3;
-      break;
-    case '4':
-      temp.value = 4;
-      break;
-    case '5':
-      temp.value = 5;
-      break;
-    case '6':
-      temp.value = 6;
-      break;
-    case '7':
-      temp.value = 7;
-      break;
-    case '8':
-      temp.value = 8;
-      break;
-    case '9':
-      temp.value = 9;
-      break;
     case 'J':
-      temp.value = 11;
+      temp.value = VALUE_JACK;
       break;
     case 'Q':
-      temp.value = 12;
+      temp.value = VALUE_QUEEN;
       break;
     case 'K':
-      temp.value = 13;
+      temp.value = VALUE_KING;
       break;
     case 'A':
-      temp.value = 14;
+      temp.value = VALUE_ACE;
       break;
     default:
-      temp.value = 0;
+      temp.value = value_let - '0';
       break;
   }
     switch(suit_let) {
       case 'S':
-	//temp.suit = SPADES;
-	temp.suit = 'S';
+	temp.suit = SPADES;
 	break;
       case 'H':
-	//temp.suit = HEARTS;
-	temp.suit = 'H';
+	temp.suit = HEARTS;
 	break;
       case 'D':
-     	//temp.suit = DIAMONDS;
-	temp.suit = 'D';
+     	temp.suit = DIAMONDS;
 	break;
       case 'C':
-	//temp.suit = CLUBS;
-	temp.suit = 'C';
+	temp.suit = CLUBS;
 	break;
       default:
-	//temp.suit = NUM_SUITS;
-	temp.suit = 'N';
+	temp.suit = NUM_SUITS;
 	break;
   }
   return temp;
 }
 card_t card_from_num(unsigned c) {
   card_t temp;
-  if(c >= 0 && c <= 12) {
-    temp.suit = 'S';
+  assert(0 <= c && c < 52);
+  
+  if(0 <= c && c < 13) {
+    temp.suit = SPADES;
   } 
-  if(c > 12 && c <= 25) {
-    temp.suit = 'H';
+  else if(13 <= c && c < 26) {
+    temp.suit = HEARTS;
   }
-  if(c > 25 && c <= 38) {
-    temp.suit = 'D';
+  else if(26 <= c && c < 39) {
+    temp.suit = DIAMONDS;
   }
-  if(c > 38 && c <= 51) {
-    temp.suit = 'C';
+  else {
+    temp.suit = CLUBS;
   }
-  temp.value = c % 13;
-  if(temp.value == 0) {
-    temp.value = 13;
-  }
+  
+  temp.value = c % 13 + 1;
   if(temp.value == 1) {
     temp.value = 14;
   }
+  
   return temp;
 }

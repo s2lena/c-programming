@@ -14,7 +14,7 @@ int main(void) {
   card_t x = card_from_letters('8','H');
   printf("For %d of %d\n", x.value, x.suit);
   card_t y = card_from_num(36);
-  printf("For %d of %c \n", y.value, y.suit);
+  printf("For %d of %d \n", y.value, y.suit);
   
   return 0;
 }

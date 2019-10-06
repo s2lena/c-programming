@@ -1,58 +1,60 @@
-Grading at Sun Oct  6 11:27:13 UTC 2019
+Grading at Sun Oct  6 11:32:57 UTC 2019
 Compiling cards.c
 Testing card_from_letters
-For card_from_letters('0','c'), I expected 0c but got 0?
-For card_from_letters('0','d'), I expected 0d but got 0?
-For card_from_letters('0','h'), I expected 0h but got 0?
-For card_from_letters('0','s'), I expected 0s but got 0?
-For card_from_letters('2','c'), I expected 2c but got 2?
-For card_from_letters('2','d'), I expected 2d but got 2?
-For card_from_letters('2','h'), I expected 2h but got 2?
-For card_from_letters('2','s'), I expected 2s but got 2?
-For card_from_letters('3','c'), I expected 3c but got 3?
-For card_from_letters('3','d'), I expected 3d but got 3?
-For card_from_letters('3','h'), I expected 3h but got 3?
-For card_from_letters('3','s'), I expected 3s but got 3?
-For card_from_letters('4','c'), I expected 4c but got 4?
-For card_from_letters('4','d'), I expected 4d but got 4?
-For card_from_letters('4','h'), I expected 4h but got 4?
-For card_from_letters('4','s'), I expected 4s but got 4?
-For card_from_letters('5','c'), I expected 5c but got 5?
-For card_from_letters('5','d'), I expected 5d but got 5?
-For card_from_letters('5','h'), I expected 5h but got 5?
-For card_from_letters('5','s'), I expected 5s but got 5?
-For card_from_letters('6','c'), I expected 6c but got 6?
-For card_from_letters('6','d'), I expected 6d but got 6?
-For card_from_letters('6','h'), I expected 6h but got 6?
-For card_from_letters('6','s'), I expected 6s but got 6?
-For card_from_letters('7','c'), I expected 7c but got 7?
-For card_from_letters('7','d'), I expected 7d but got 7?
-For card_from_letters('7','h'), I expected 7h but got 7?
-For card_from_letters('7','s'), I expected 7s but got 7?
-For card_from_letters('8','c'), I expected 8c but got 8?
-For card_from_letters('8','d'), I expected 8d but got 8?
-For card_from_letters('8','h'), I expected 8h but got 8?
-For card_from_letters('8','s'), I expected 8s but got 8?
-For card_from_letters('9','c'), I expected 9c but got 9?
-For card_from_letters('9','d'), I expected 9d but got 9?
-For card_from_letters('9','h'), I expected 9h but got 9?
-For card_from_letters('9','s'), I expected 9s but got 9?
-For card_from_letters('A','c'), I expected Ac but got A?
-For card_from_letters('A','d'), I expected Ad but got A?
-For card_from_letters('A','h'), I expected Ah but got A?
-For card_from_letters('A','s'), I expected As but got A?
-For card_from_letters('J','c'), I expected Jc but got J?
-For card_from_letters('J','d'), I expected Jd but got J?
-For card_from_letters('J','h'), I expected Jh but got J?
-For card_from_letters('J','s'), I expected Js but got J?
-For card_from_letters('K','c'), I expected Kc but got K?
-For card_from_letters('K','d'), I expected Kd but got K?
-For card_from_letters('K','h'), I expected Kh but got K?
-For card_from_letters('K','s'), I expected Ks but got K?
-For card_from_letters('Q','c'), I expected Qc but got Q?
-For card_from_letters('Q','d'), I expected Qd but got Q?
-For card_from_letters('Q','h'), I expected Qh but got Q?
-For card_from_letters('Q','s'), I expected Qs but got Q?
+Passed
+Testing value_letter and suit_letter
+For Ks, you gave value = K, suit = S
+For Kh, you gave value = K, suit = H
+For Kd, you gave value = K, suit = D
+For Kc, you gave value = K, suit = C
+For As, you gave value = A, suit = S
+For Ah, you gave value = A, suit = H
+For Ad, you gave value = A, suit = D
+For Ac, you gave value = A, suit = C
+For 2s, you gave value = 2, suit = S
+For 2h, you gave value = 2, suit = H
+For 2d, you gave value = 2, suit = D
+For 2c, you gave value = 2, suit = C
+For 3s, you gave value = 3, suit = S
+For 3h, you gave value = 3, suit = H
+For 3d, you gave value = 3, suit = D
+For 3c, you gave value = 3, suit = C
+For 4s, you gave value = 4, suit = S
+For 4h, you gave value = 4, suit = H
+For 4d, you gave value = 4, suit = D
+For 4c, you gave value = 4, suit = C
+For 5s, you gave value = 5, suit = S
+For 5h, you gave value = 5, suit = H
+For 5d, you gave value = 5, suit = D
+For 5c, you gave value = 5, suit = C
+For 6s, you gave value = 6, suit = S
+For 6h, you gave value = 6, suit = H
+For 6d, you gave value = 6, suit = D
+For 6c, you gave value = 6, suit = C
+For 7s, you gave value = 7, suit = S
+For 7h, you gave value = 7, suit = H
+For 7d, you gave value = 7, suit = D
+For 7c, you gave value = 7, suit = C
+For 8s, you gave value = 8, suit = S
+For 8h, you gave value = 8, suit = H
+For 8d, you gave value = 8, suit = D
+For 8c, you gave value = 8, suit = C
+For 9s, you gave value = 9, suit = S
+For 9h, you gave value = 9, suit = H
+For 9d, you gave value = 9, suit = D
+For 9c, you gave value = 9, suit = C
+For 0s, you gave value = 0, suit = S
+For 0h, you gave value = 0, suit = H
+For 0d, you gave value = 0, suit = D
+For 0c, you gave value = 0, suit = C
+For Js, you gave value = J, suit = S
+For Jh, you gave value = J, suit = H
+For Jd, you gave value = J, suit = D
+For Jc, you gave value = J, suit = C
+For Qs, you gave value = Q, suit = S
+For Qh, you gave value = Q, suit = H
+For Qd, you gave value = Q, suit = D
+For Qc, you gave value = Q, suit = C
 Failed
 
 Overall Grade: FAILED

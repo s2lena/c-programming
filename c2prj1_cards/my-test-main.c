@@ -4,7 +4,7 @@
 
 int main(void) {
   card_t c;
-  c.value = 11;
+  c.value = 8;
   c.suit = 2;
   assert_card_valid(c);
   printf("My ranking is %s\n", ranking_to_string(FLUSH));

@@ -7,13 +7,13 @@ int main(void) {
   int * p = anArray;
   printf("*p = %d\n", *p);
   p++;
-  printf("Now *p = %d\n", *p);
-  int * q = &anArray[3];
-  int ** x = &q;
-  **x = 12;
-  *x = p;
-  **x = 42;
-  q[1] = 9;
+  printf("Now *p = %d\n", *p);// *p = anArray[1]
+  int * q = &anArray[3];// = 99
+  int ** x = &q;// = anArray[3]
+  **x = 12;// anArray[3] = 12
+  *x = p;// q = p = anArray[1]
+  **x = 42;// anArray[1] = 42
+  q[1] = 9;// anArray[2] = 9; q[0] = anArray[1]
   for (int i =0; i < 4; i++){
     printf("anArray[%d] = %d\n",i, anArray[i]);
   }

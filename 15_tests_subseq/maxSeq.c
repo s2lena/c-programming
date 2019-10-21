@@ -1,20 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-size_t maxSeq(int * array, size_t n) {
-  int length = 1;
-  int max = array[0];
-  if(n == 0) {
-    return NULL;
+int max(int a, int b) {
+  if (a > b) {
+    return a;
   }
-  for(int i = 1; i < n; i++) {
-    if(max < array[i]) {
-      length += 1; 
+  return b;
+}
+
+size_t maxSeq(int* array, size_t n) {
+  int length = 0;
+  int max_length = 0;
+
+  for (int i = 0; i < n; i++) {
+    length++;
+    if (array[i] >= array[i + 1]) {
+      max_length = max(max_length, length);
+      length = 0;
     }
-    else {
-      length = 1;
-    }
-    max = array[i];
   }
-  return length;
+  return max_length;
 }

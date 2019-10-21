@@ -3,12 +3,19 @@
 size_t maxSeq (int * array, size_t n);
 
 int main() {
-  int test = maxSeq(int * array, size_t n);
-  if(test == NULL) {
-    printf("Fail\n");
+  int array2[] = {2, 3, 4, 1, 2};
+  if(maxSeq(array2, 5) != 5) {
+    printf("Failed on 2, 3, 4, 1, 2\n");
+    exit(EXIT_FAILURE);
   }
-  else {
-    printf("The max length is %d\n", test);
+  int array1[] = {1, 2, 3, -1, -2, -3};
+  if(maxSeq(array1, 6) != 3) {
+    printf("Failed on 1, 2, 3, -1, -2, -3\n");
+    exit(EXIT_FAILURE);
   }
-  return 0;
+  int array3[] = {1};
+  if(maxSeq(array3, 1) != 0) {
+    printf("Failed on 1\n");
+    exit(EXIT_FAILURE);
+  }
 }

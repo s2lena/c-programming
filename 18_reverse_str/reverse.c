@@ -3,7 +3,10 @@
 #include <string.h>
 
 void reverse(char * str) {
-  //WRITE ME!
+  if (str == NULL) {
+    return;
+  }
+  
   char length = strlen(str);
   if (length == 0) {
     return;

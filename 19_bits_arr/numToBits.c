@@ -36,8 +36,31 @@ int getNthBit(uint32_t number, int bit) {
  *   be bit 30 of nums[0], and so on.
  */
 void numToBits(uint32_t * nums, int nNums, int * bits, int nBits) {
+  if (nNums * 32 != nBits) {
+    printf("Invalid call to numToBits! nBits is %d, nNums is %d\n", nBits, nNums);
+    return;
+  }
+  
+  uint32_t max_divisor = 1;
+  for (int i = 1; i < 32; i++) {
+    max_divisor *= 2;
+  }
+  
+  uint32_t divisor;
+  uint32_t num;
 
+  for (int i = 0; i < nNums; i++) {
+    num = nums[i];
+    divisor = max_divisor;
+
+    for (int j = 0; j < 32; j++) {
+      bits[i * 32 + j] = num / divisor;
+      num = num % divisor;
+      divisor /= 2;
+    }
+  }
 }
+
 
 void doTest(uint32_t * nums, int n) {
   int bits[n *32];

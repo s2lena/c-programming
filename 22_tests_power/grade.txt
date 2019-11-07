@@ -1,51 +1,86 @@
-Grading at Thu Nov  7 15:00:24 UTC 2019
+Grading at Thu Nov  7 15:21:35 UTC 2019
 **Testing broken implementation 10 **
 -------------------------------------
 
+1 0 1
+2 3 8
 
 **Testing broken implementation 11 **
 -------------------------------------
 
+1 0 1
+2 3 8
+0 0 1
+0 1 0
+1000000000 1 1000000000
 
 **Testing broken implementation 1 **
 -------------------------------------
 
+1 0 1
+2 3 8
 
 **Testing broken implementation 2 **
 -------------------------------------
 
+1 0 1
 
 **Testing broken implementation 3 **
 -------------------------------------
 
+1 0 1
+2 3 8
+0 0 1
 
 **Testing broken implementation 4 **
 -------------------------------------
 
+1 0 1
+2 3 8
+0 0 1
+0 1 0
+1000000000 1 1000000000
 
 **Testing broken implementation 5 **
 -------------------------------------
 
+1 0 1
+2 3 8
 
 **Testing broken implementation 6 **
 -------------------------------------
 
+1 0 1
+2 3 8
+0 0 1
+0 1 0
 
 **Testing broken implementation 7 **
 -------------------------------------
 
+1 0 1
+2 3 8
 
 **Testing broken implementation 8 **
 -------------------------------------
 
+1 0 1
+2 3 8
 
 **Testing broken implementation 9 **
 -------------------------------------
 
+1 0 1
+2 3 8
 
 **Testing correct implementation **
 -------------------------------------
 
+1 0 1
+2 3 8
+0 0 1
+0 1 0
+1000000000 1 1000000000
 
 All tests were ok.
 

@@ -1,14 +1,44 @@
-Grading at Sat Nov  9 07:16:23 UTC 2019
+Grading at Sat Nov  9 07:18:16 UTC 2019
 Compiling deck.c
 Compiling cards.c
 cards.c: In function ‘suit_letter’:
-cards.c:84:10: error: ‘x’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
-   return x ;
-          ^
-cards.c: In function ‘print_card’:
-cards.c:66:8: error: ‘x’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
-   char x;
-        ^
+cards.c:68:9: error: expected expression before ‘:’ token
+     case: SPADES:
+         ^
+cards.c:71:9: error: expected expression before ‘:’ token
+     case: HEARTS:
+         ^
+cards.c:74:9: error: expected expression before ‘:’ token
+     case: DIAMONDS:
+         ^
+cards.c:77:9: error: expected expression before ‘:’ token
+     case: CLUBS:
+         ^
+cards.c:80:9: error: expected expression before ‘:’ token
+     case: NUM_SUITS:
+         ^
+cards.c:67:3: error: enumeration value ‘SPADES’ not handled in switch [-Werror=switch]
+   switch(c.suit) {
+   ^
+cards.c:67:3: error: enumeration value ‘HEARTS’ not handled in switch [-Werror=switch]
+cards.c:67:3: error: enumeration value ‘DIAMONDS’ not handled in switch [-Werror=switch]
+cards.c:67:3: error: enumeration value ‘CLUBS’ not handled in switch [-Werror=switch]
+cards.c:67:3: error: enumeration value ‘NUM_SUITS’ not handled in switch [-Werror=switch]
+cards.c:80:11: error: label ‘NUM_SUITS’ defined but not used [-Werror=unused-label]
+     case: NUM_SUITS:
+           ^
+cards.c:77:11: error: label ‘CLUBS’ defined but not used [-Werror=unused-label]
+     case: CLUBS:
+           ^
+cards.c:74:11: error: label ‘DIAMONDS’ defined but not used [-Werror=unused-label]
+     case: DIAMONDS:
+           ^
+cards.c:71:11: error: label ‘HEARTS’ defined but not used [-Werror=unused-label]
+     case: HEARTS:
+           ^
+cards.c:68:11: error: label ‘SPADES’ defined but not used [-Werror=unused-label]
+     case: SPADES:
+           ^
 cc1: all warnings being treated as errors
 Could not compile your cards.c!
 

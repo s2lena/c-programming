@@ -1,44 +1,56 @@
-Grading at Sat Nov  9 07:18:16 UTC 2019
+Grading at Sat Nov  9 07:19:45 UTC 2019
 Compiling deck.c
 Compiling cards.c
 cards.c: In function ‘suit_letter’:
-cards.c:68:9: error: expected expression before ‘:’ token
-     case: SPADES:
-         ^
-cards.c:71:9: error: expected expression before ‘:’ token
-     case: HEARTS:
-         ^
-cards.c:74:9: error: expected expression before ‘:’ token
-     case: DIAMONDS:
-         ^
-cards.c:77:9: error: expected expression before ‘:’ token
-     case: CLUBS:
-         ^
-cards.c:80:9: error: expected expression before ‘:’ token
-     case: NUM_SUITS:
-         ^
-cards.c:67:3: error: enumeration value ‘SPADES’ not handled in switch [-Werror=switch]
-   switch(c.suit) {
-   ^
-cards.c:67:3: error: enumeration value ‘HEARTS’ not handled in switch [-Werror=switch]
-cards.c:67:3: error: enumeration value ‘DIAMONDS’ not handled in switch [-Werror=switch]
-cards.c:67:3: error: enumeration value ‘CLUBS’ not handled in switch [-Werror=switch]
-cards.c:67:3: error: enumeration value ‘NUM_SUITS’ not handled in switch [-Werror=switch]
-cards.c:80:11: error: label ‘NUM_SUITS’ defined but not used [-Werror=unused-label]
-     case: NUM_SUITS:
-           ^
-cards.c:77:11: error: label ‘CLUBS’ defined but not used [-Werror=unused-label]
-     case: CLUBS:
-           ^
-cards.c:74:11: error: label ‘DIAMONDS’ defined but not used [-Werror=unused-label]
-     case: DIAMONDS:
-           ^
-cards.c:71:11: error: label ‘HEARTS’ defined but not used [-Werror=unused-label]
-     case: HEARTS:
-           ^
-cards.c:68:11: error: label ‘SPADES’ defined but not used [-Werror=unused-label]
-     case: SPADES:
-           ^
+cards.c:68:7: error: a label can only be part of a statement and a declaration is not a statement
+       char x = 's';
+       ^
+cards.c:71:7: error: a label can only be part of a statement and a declaration is not a statement
+       char x = 'h';
+       ^
+cards.c:71:12: error: redefinition of ‘x’
+       char x = 'h';
+            ^
+cards.c:68:12: note: previous definition of ‘x’ was here
+       char x = 's';
+            ^
+cards.c:74:7: error: a label can only be part of a statement and a declaration is not a statement
+       char x = 'd';
+       ^
+cards.c:74:12: error: redefinition of ‘x’
+       char x = 'd';
+            ^
+cards.c:71:12: note: previous definition of ‘x’ was here
+       char x = 'h';
+            ^
+cards.c:77:7: error: a label can only be part of a statement and a declaration is not a statement
+       char x = 'c';
+       ^
+cards.c:77:12: error: redefinition of ‘x’
+       char x = 'c';
+            ^
+cards.c:74:12: note: previous definition of ‘x’ was here
+       char x = 'd';
+            ^
+cards.c:80:7: error: a label can only be part of a statement and a declaration is not a statement
+       char x = '?';
+       ^
+cards.c:80:12: error: redefinition of ‘x’
+       char x = '?';
+            ^
+cards.c:77:12: note: previous definition of ‘x’ was here
+       char x = 'c';
+            ^
+cards.c:80:12: error: unused variable ‘x’ [-Werror=unused-variable]
+       char x = '?';
+            ^
+cards.c:83:10: error: ‘x’ undeclared (first use in this function)
+   return x;
+          ^
+cards.c:83:10: note: each undeclared identifier is reported only once for each function it appears in
+cards.c:84:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
 cc1: all warnings being treated as errors
 Could not compile your cards.c!
 

@@ -1,0 +1,15 @@
+Grading at Sat Nov  9 07:11:07 UTC 2019
+Compiling deck.c
+Compiling cards.c
+cards.c: In function ‘suit_letter’:
+cards.c:84:11: error: ‘x’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   return  x ;
+           ^
+cards.c: In function ‘print_card’:
+cards.c:66:8: error: ‘x’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   char x ;
+        ^
+cc1: all warnings being treated as errors
+Could not compile your cards.c!
+
+Overall Grade: FAILED

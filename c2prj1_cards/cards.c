@@ -63,22 +63,21 @@ char value_letter(card_t c) {
 }
 
 char suit_letter(card_t c) {
-  char x;
   switch(c.suit) {
-    case: SPADES:
-      x = 's';
+    case SPADES:
+      char x = 's';
       break;
-    case: HEARTS:
-      x = 'h';
+    case HEARTS:
+      char x = 'h';
       break;
-    case: DIAMONDS:
-      x = 'd';
+    case DIAMONDS:
+      char x = 'd';
       break;
-    case: CLUBS:
-      x = 'c';
+    case CLUBS:
+      char x = 'c';
       break;
-    case: NUM_SUITS:
-      x = '?';
+    case NUM_SUITS:
+      char x = '?';
       break;
   }
   return x;

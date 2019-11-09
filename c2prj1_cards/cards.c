@@ -63,7 +63,7 @@ char value_letter(card_t c) {
 }
 
 char suit_letter(card_t c) {
-  char x ;
+  char x;
   switch(c.suit) {
     case SPADES:
       x = 's';
@@ -81,7 +81,7 @@ char suit_letter(card_t c) {
       x = '?';
       break;
   }
-  return  x ;
+  return x ;
 }
   
 void print_card(card_t c) {

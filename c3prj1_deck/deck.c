@@ -14,32 +14,36 @@ void print_hand(deck_t * hand){
 }
 
 int deck_contains(deck_t * d, card_t c) {
-  for (int i = 0; i <= ((d->n_cards) - 1); i++) {
-    if (((d->cards[i]->value) == c.value) && ((d->cards[i]->suit) == c.suit)) {
-      return 1;
+  size_t n = d->n_cards;
+  deck_t decks = * d;
+  for (size_t i = 0; i < n; i++) {
+    card_t check = * (decks.cards[i]);
+    if (check.value == c.value) {
+      if (check.suit == c.suit) {
+	return 1;
+      }
     }
   }
   return 0;
 }
 
 void shuffle(deck_t * d){
-  size_t n = (*d).n_cards;
-  card_t ** ptc = (*d).cards;
-  for(int i = n-1; i > 0; i--){
-
-    int k = random()%(i+1);
-
-    card_t ** ptc1 = ptc +n -1 -i;
-    card_t ** ptc2 = ptc + k;
-    card_t * temp = *ptc1;
-    *ptc1 = *ptc2;
-    *ptc2 = temp;
-  }
+  size_t n = d->n_cards;
+  card_t ** ptr = d->cards;
+  for (int i = 0; i <= n - 1; i++) {
+    int k = rand()%((n - 1) - 0 + 1) + 0;
+    card_t ** ptr1 = ptr + k;
+    card_t ** ptr2 = ptr + i;
+    card_t * temp = * ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+  } 
 }
 
 void assert_full_deck(deck_t * d) {
   for (int i = 0; i <= ((d->n_cards) - 1); i++) {
-    assert((d->cards[i]->value) < 2 || (d->cards[i]->value) > 14);
-    assert((d->cards[i]->suit) < 0 || (d->cards[i]->suit) > 3);
+  assert((d->cards[i]->value) >= 2 || (d->cards[i]->value) <= 14);
+  assert((d->cards[i]->suit) >= 0 || (d->cards[i]->suit) <= 3);
   }
 }
+

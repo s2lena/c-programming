@@ -4,24 +4,81 @@
 #include <assert.h>
 
 int card_ptr_comp(const void * vp1, const void * vp2) {
+  const card_t * const * cp1 = vp1;
+  const card_t * const * cp2 = vp2;
+  if ((*cp1)->value > (*cp2)->value) {
+    return -1;
+  }
+  else if ((*cp1)->value < (*cp2)->value) {
+    return 1;
+  }
+  else {
+    if ((*cp1)->suit > (*cp2)->suit) {
+      return -1;
+    }
+    else if ((*cp1)->suit < (*cp2)->suit) {
+      return 1;
+    }
+  }
   return 0;
 }
 
 suit_t flush_suit(deck_t * hand) {
+  size_t n = hand->n_cards;
+  deck_t hands = * hand;
+  int s = 0, clubs = 0, h = 0, d = 0;
+  for (int i = 0; i < n; i++) {
+    card_t c = * (hands.cards[i]);
+    if (c.suit == 0) {
+      s++;
+      if (s == 5) {
+	return SPADES;
+      }
+    }
+    else if (c.suit == 1) {
+      h++;
+      if (h == 5) {
+	return HEARTS;
+      }
+    }
+    else if (c.suit == 2) {
+      d++;
+      if (d == 5) {
+	return DIAMONDS;
+      }
+    }
+    else if (c.suit == 3) {
+      clubs++;
+      if (clubs == 5) {
+	return CLUBS;
+      }
+    }
+  }
   return NUM_SUITS;
 }
 
 unsigned get_largest_element(unsigned * arr, size_t n) {
-  return 0;
+  unsigned max = 0;
+  for (int i = 0; i < n; i++) {
+    if ( max < arr[i]) {
+      max = arr[i];
+    }
+  }
+  return max;
 }
 
 size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
-
+  for (int i = 0; i < n; i++) {
+    if (match_counts[i] == n_of_akind) {
+      return i;
+    }
+  }
   return 0;
 }
 ssize_t  find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
 			     size_t match_idx) {
+  
   return -1;
 }
 

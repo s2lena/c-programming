@@ -212,12 +212,10 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   if (eval1.ranking != eval2.ranking) {
     return (-1) * (eval1.ranking - eval2.ranking);
   }
-  else {
-    for (int i = 0; i < 5; i++) {
-      int j = card_ptr_comp(&eval1.cards[i], &eval2.cards[i]);
-      if (j != 0) {
-        return (-1) * j;
-      }
+  for (int i = 0; i < 5; i++) {
+    int j = eval1.cards[i]->value - eval2.cards[i]->value;
+    if (j != 0) {
+      return j;
     }
   }
   return 0;

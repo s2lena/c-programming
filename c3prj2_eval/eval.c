@@ -11,7 +11,7 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
     return (*cp2)->value - (*cp1)->value;
   }
 
-  return (*cp1)->suit - (*cp2)->suit;
+  return (*cp2)->suit - (*cp1)->suit;
 }
 
 suit_t flush_suit(deck_t * hand) {

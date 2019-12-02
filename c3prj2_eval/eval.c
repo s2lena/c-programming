@@ -169,8 +169,8 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
 				  hand_ranking_t what,
-				  size_t idx) {
-  card_t * cards[5]; 
+				  size_t idx) {  
+  card_t * cards[5];
   hand_eval_t ans;
   ans.ranking = what;
   for (int i = 0; i < n; i++) {
@@ -205,18 +205,18 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   qsort(hand1->cards, hand1->n_cards, sizeof(card_t*), card_ptr_comp);
   // Sort cards in hand2
   qsort(hand2->cards, hand2->n_cards, sizeof(card_t*), card_ptr_comp);
-  
+
   hand_eval_t eval1 = evaluate_hand(hand1);
   hand_eval_t eval2 = evaluate_hand(hand2);
 
   if (eval1.ranking != eval2.ranking) {
-    return -(eval1.ranking - eval2.ranking);
+    return (-1) * (eval1.ranking - eval2.ranking);
   }
   else {
     for (int i = 0; i < 5; i++) {
-      int j = card_ptr_comp(eval1.cards[i], eval2.cards[i]);
+      int j = card_ptr_comp(&eval1.cards[i], &eval2.cards[i]);
       if (j != 0) {
-        return -j;
+        return (-1) * j;
       }
     }
   }

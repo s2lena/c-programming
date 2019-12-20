@@ -173,11 +173,11 @@ int checkWin(board_t * b) {
   for (int i = 0; i < h; i++) {
     for (int j = 0; j < w; j++) {
       if (b->board[i][j] == UNKNOWN) {
-	return 1;
+	return 0;
       }
     }
   }
-  return 0;
+  return 1;
 }
 
 void freeBoard(board_t * b) {

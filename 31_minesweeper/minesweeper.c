@@ -109,41 +109,16 @@ void printBoard(board_t * b) {
 int countMines(board_t * b, int x, int y) {
   //WRITE ME!
   int count = 0;
-  int a = b->width - 1;
-  int c = b->height - 1;
-  if (x == 0) {
-    if (y != 0) {
-      count += b->board[y - 1][x + 1];
-      count += b->board[y - 1][x];
+  for (int i = x - 1; i < x + 2; i++) {
+    for (int j = y - 1; j < y + 2; j++) {
+      if (0 <= i && i < b->width) {
+	if (0 <= j && j < b->height) {
+	  if (i != x && j != y) {
+	    count++;
+	  }
+	}
+      }
     }
-    if (y != c) {
-      count += b->board[y + 1][x + 1];
-      count += b->board[y + 1][x];
-    }
-    count += b->board[y][x + 1];
-  } else if (x == a) {
-    if (y != 0) {
-      count += b->board[y - 1][x - 1];
-      count += b->board[y - 1][x];
-    }
-    if (y != c) {
-      count += b->board[y + 1][x - 1];
-      count += b->board[y + 1][x];
-    }
-    count += b->board[y][x - 1];
-  } else {
-    if (y != 0) {
-      count += b->board[y - 1][x - 1];
-      count += b->board[y - 1][x + 1];
-      count += b->board[y - 1][x];
-    }
-    if (y != c) {
-      count += b->board[y + 1][x - 1];
-      count += b->board[y + 1][x + 1];
-      count += b->board[y + 1][x];
-    }
-    count += b->board[y][x - 1];
-    count += b->board[y][x + 1];
   }
   return count;
 }

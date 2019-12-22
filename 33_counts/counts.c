@@ -31,7 +31,7 @@ void addCount(counts_t* c, const char* name) {
       c->arr[index] = malloc(sizeof(one_count_t));
       c->arr[index]->str = malloc(sizeof(char) * (strlen(name) + 1));
       strcpy(c->arr[index]->str, name);
-      c->arr[index]->time = 1;
+      c->arr[index]->time = 0;
     }
     c->arr[index]->time += 1;
   }

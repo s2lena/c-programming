@@ -37,6 +37,9 @@ kvarray_t * readKVs(const char * fname) {
     i++;
     curr = NULL;
   }
+  if (fclose(f) != 0){
+    return NULL;
+  }
   a->length = i;
   return a;
 }

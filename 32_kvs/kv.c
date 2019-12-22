@@ -5,7 +5,7 @@
 
 kvarray_t * readKVs(const char * fname) {
   //WRITE ME
-  char * curr; size_t sz = 0;
+  char * curr = NULL; size_t sz = 0;
   FILE * f = fopen(fname, "r");
   if (f == NULL) {
     return NULL;
@@ -19,25 +19,37 @@ kvarray_t * readKVs(const char * fname) {
     a->kvArr[i]->key = NULL;
     a->kvArr[i]->value = NULL;
     int j = 0;
-    while (curr[j] != '=') {
+    while (1) {
       a->kvArr[i]->key = realloc(a->kvArr[i]->key, (j + 1) * sizeof(char));
-      a->kvArr[i]->key[j] = curr[j];
-      j++;
+      if (curr[j] != '=') {
+	a->kvArr[i]->key[j] = curr[j];
+	j++;
+      }
+      else {
+	a->kvArr[i]->key[j] = '\0';
+	j++;
+	break;
+      }
     }
-    a->kvArr[i]->key[j] = '\0';
-    j++;
     int c = 0;
-    while (curr[j] != '\n') {
+    while (1) {
       a->kvArr[i]->value = realloc(a->kvArr[i]->value, (c + 1) * sizeof(char));
-      a->kvArr[i]->value[c] = curr[j];
-      j++;
-      c++;
+      if (curr[j] != '\n') {
+	a->kvArr[i]->value[c] = curr[j];
+	j++;
+	c++;
+      }
+      else {
+	a->kvArr[i]->value[c] = '\0';
+	break;
+      }
     }
-    a->kvArr[i]->value[c] = '\0';
     i++;
+    free(curr);
     curr = NULL;
   }
-  if (fclose(f) != 0){
+  free(curr);
+  if (fclose(f) != 0) {
     return NULL;
   }
   a->length = i;
@@ -48,6 +60,7 @@ void freeKVs(kvarray_t * pairs) {
   for (int i = 0; i < pairs->length; i++) {
     free(pairs->kvArr[i]->key);
     free(pairs->kvArr[i]->value);
+    free(pairs->kvArr[i]);
   }
   free(pairs->kvArr);
   free(pairs);

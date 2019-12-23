@@ -33,8 +33,10 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
 }
 
 int main(int argc, char ** argv) {
+  printf("#argc: %d\n", argc);
   //WRITE ME (plus add appropriate error checking!)
   if (argc <= 2) {
+    perror("Usage : ./count_values reference_file inputfile0 inputfile1 .... inputfileN\n");
     exit(EXIT_FAILURE);
   }
   //read the key/value pairs from the file named by argv[1] (call the result kv)

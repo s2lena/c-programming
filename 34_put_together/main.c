@@ -9,6 +9,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   //WRITE ME
   FILE * f = fopen(filename, "r");
   if (f == NULL) {
+    perror("Could not open file");
     return NULL;
   }
   counts_t * c = createCounts();
@@ -27,6 +28,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   }
   free(curr);
   if (fclose(f) != 0) {
+    perror("Failed to close the input file!"); 
     return NULL;
   }
   return c;
@@ -51,6 +53,7 @@ int main(int argc, char ** argv) {
     //open the file named by outName (call that f)
     FILE * f = fopen(outFileName, "w");
     if ( f == NULL) {
+      perror("Could not open file");
       return EXIT_FAILURE;
     }
     //print the counts from c into the FILE f

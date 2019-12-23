@@ -43,7 +43,7 @@ void printCounts(counts_t* c, FILE* outFile) {
     fprintf(outFile, "%s: %d\n", c->arr[i]->str, c->arr[i]->time);
   }
   if (c->unknown != 0) {
-    fprintf(outFile, "<unkhown> : %d\n", c->unknown);
+    fprintf(outFile, "<unknown> : %d\n", c->unknown);
   }
 }
 

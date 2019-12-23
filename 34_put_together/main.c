@@ -60,6 +60,7 @@ int main(int argc, char ** argv) {
     printCounts(c, f);
     //close f
     if (fclose(f) != 0) {
+      perror("Failed to close the output file!");
       return EXIT_FAILURE;
     }
     //free the memory for outName and c

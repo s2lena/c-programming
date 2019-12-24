@@ -69,10 +69,10 @@ card_t* add_empty_card(deck_t* deck) {
 
 deck_t* make_deck_exclude(deck_t* excluded_cards) {
   deck_t * d = malloc(sizeof(deck_t));
-  d->n_cards = 0;
+  d->n_cards = 0; card_t c = 0;
   for (int i = 0; i < 13; i++) {
     for (int j = 0; j < 4; j++) {
-      card_t c = card_from_num(i + (13 * j));
+      c = card_from_num(i + (13 * j));
       if (deck_contains(excluded_cards, c) == 1){
 	continue;
       }

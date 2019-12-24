@@ -1,0 +1,11 @@
+Grading at Tue Dec 24 07:29:50 UTC 2019
+Compiling deck.c -> deck.o
+Compiling eval.c -> eval.o
+eval.c: In function ‘get_match_counts’:
+eval.c:255:10: error: pointer targets in return differ in signedness [-Werror=pointer-sign]
+   return array;
+          ^
+cc1: all warnings being treated as errors
+Compilation of eval.c failed
+
+Overall Grade: F

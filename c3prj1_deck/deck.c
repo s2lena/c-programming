@@ -85,6 +85,7 @@ deck_t* make_deck_exclude(deck_t* excluded_cards) {
 
 deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
   deck_t * excluded = malloc(sizeof(deck_t));
+  excluded->cards = malloc(sizeof(card_t));
   excluded->n_cards = 0;
   for (int i = 0; i < n_hands; i++) {
     for (int j = 0; j < hands[i]->n_cards; j++) {

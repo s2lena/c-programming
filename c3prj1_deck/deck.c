@@ -71,11 +71,13 @@ deck_t* make_deck_exclude(deck_t* excluded_cards) {
   deck_t * d = malloc(sizeof(deck_t));
   d->n_cards = 0;
   for (int i = 0; i < (52 - excluded_cards->n_cards); i++) {
-    card_t c = card_from_num(i);
-    if (deck_contains(excluded_cards, c) == 1){
-      continue;
+    for (int j = 0; j < 4; j++) {
+      card_t c = card_from_num(i * j);
+      if (deck_contains(excluded_cards, c) == 1){
+	continue;
+      }
+      add_card_to(d, c);
     }
-    add_card_to(d, c);
   }
   return d;
 }

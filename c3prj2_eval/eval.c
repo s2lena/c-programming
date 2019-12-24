@@ -241,7 +241,7 @@ unsigned * get_match_counts(deck_t * hand) {
 	array[j] = count;
       }
       head = i;
-      pre = array[i];
+      pre =  hand->cards[i]->value;
       count = 1;
     }
     if ((i + 1) == hand->n_cards) {

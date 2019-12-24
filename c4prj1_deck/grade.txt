@@ -1,4 +1,4 @@
-Grading at Tue Dec 24 09:09:33 UTC 2019
+Grading at Tue Dec 24 09:12:57 UTC 2019
 Compiling deck.c -> deck.o
 Compiling eval.c -> eval.o
 Compiling cards.c -> cards.o
@@ -18,91 +18,62 @@ Testing with 3 hands
 Testing with 4 hands
 Testing with 5 hands
 Testing with 6 hands
-Valgrind reported errors:
-==1107== Memcheck, a memory error detector
-==1107== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==1107== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==1107== Command: ./tester brd
-==1107== Parent PID: 1106
-==1107== 
-==1107== Conditional jump or move depends on uninitialised value(s)
-==1107==    at 0x4C2FD0C: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1107==    by 0x401EE6: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==1107==    by 0x40215F: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==1107==    by 0x4032CC: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==1107==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1107== 
-==1107== 
-==1107== HEAP SUMMARY:
-==1107==     in use at exit: 15,120 bytes in 987 blocks
-==1107==   total heap usage: 7,900 allocs, 6,913 frees, 454,432 bytes allocated
-==1107== 
-==1107== LEAK SUMMARY:
-==1107==    definitely lost: 672 bytes in 42 blocks
-==1107==    indirectly lost: 14,448 bytes in 945 blocks
-==1107==      possibly lost: 0 bytes in 0 blocks
-==1107==    still reachable: 0 bytes in 0 blocks
-==1107==         suppressed: 0 bytes in 0 blocks
-==1107== Rerun with --leak-check=full to see details of leaked memory
-==1107== 
-==1107== For counts of detected and suppressed errors, rerun with: -v
-==1107== Use --track-origins=yes to see where uninitialised values come from
-==1107== ERROR SUMMARY: 42 errors from 1 contexts (suppressed: 0 from 0)
+- Test passed
 Testing get_match_count(deck_t *)
 In this hand: Ac 
   I expected the 0'th match count to be 1 but you got 0
 Valgrind reported errors:
-==1111== Memcheck, a memory error detector
-==1111== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==1111== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==1111== Command: ./tester gmc
-==1111== Parent PID: 1110
-==1111== 
-==1111== Conditional jump or move depends on uninitialised value(s)
-==1111==    at 0x402F2B: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1111==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1111== 
-==1111== Use of uninitialised value of size 8
-==1111==    at 0x4E8476B: _itoa_word (_itoa.c:179)
-==1111==    by 0x4E8812C: vfprintf (vfprintf.c:1631)
-==1111==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==1111==    by 0x402F09: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1111==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1111== 
-==1111== Conditional jump or move depends on uninitialised value(s)
-==1111==    at 0x4E84775: _itoa_word (_itoa.c:179)
-==1111==    by 0x4E8812C: vfprintf (vfprintf.c:1631)
-==1111==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==1111==    by 0x402F09: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1111==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1111== 
-==1111== Conditional jump or move depends on uninitialised value(s)
-==1111==    at 0x4E881AF: vfprintf (vfprintf.c:1631)
-==1111==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==1111==    by 0x402F09: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1111==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1111== 
-==1111== Conditional jump or move depends on uninitialised value(s)
-==1111==    at 0x4E87C59: vfprintf (vfprintf.c:1631)
-==1111==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==1111==    by 0x402F09: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1111==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1111== 
-==1111== Conditional jump or move depends on uninitialised value(s)
-==1111==    at 0x4E87CE2: vfprintf (vfprintf.c:1631)
-==1111==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==1111==    by 0x402F09: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1111==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1111== 
-==1111== 
-==1111== HEAP SUMMARY:
-==1111==     in use at exit: 0 bytes in 0 blocks
-==1111==   total heap usage: 204 allocs, 204 frees, 11,304 bytes allocated
-==1111== 
-==1111== All heap blocks were freed -- no leaks are possible
-==1111== 
-==1111== For counts of detected and suppressed errors, rerun with: -v
-==1111== Use --track-origins=yes to see where uninitialised values come from
-==1111== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 0 from 0)
+==1258== Memcheck, a memory error detector
+==1258== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==1258== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==1258== Command: ./tester gmc
+==1258== Parent PID: 1257
+==1258== 
+==1258== Conditional jump or move depends on uninitialised value(s)
+==1258==    at 0x402F3B: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==1258==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==1258== 
+==1258== Use of uninitialised value of size 8
+==1258==    at 0x4E8476B: _itoa_word (_itoa.c:179)
+==1258==    by 0x4E8812C: vfprintf (vfprintf.c:1631)
+==1258==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==1258==    by 0x402F19: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==1258==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==1258== 
+==1258== Conditional jump or move depends on uninitialised value(s)
+==1258==    at 0x4E84775: _itoa_word (_itoa.c:179)
+==1258==    by 0x4E8812C: vfprintf (vfprintf.c:1631)
+==1258==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==1258==    by 0x402F19: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==1258==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==1258== 
+==1258== Conditional jump or move depends on uninitialised value(s)
+==1258==    at 0x4E881AF: vfprintf (vfprintf.c:1631)
+==1258==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==1258==    by 0x402F19: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==1258==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==1258== 
+==1258== Conditional jump or move depends on uninitialised value(s)
+==1258==    at 0x4E87C59: vfprintf (vfprintf.c:1631)
+==1258==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==1258==    by 0x402F19: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==1258==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==1258== 
+==1258== Conditional jump or move depends on uninitialised value(s)
+==1258==    at 0x4E87CE2: vfprintf (vfprintf.c:1631)
+==1258==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==1258==    by 0x402F19: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==1258==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==1258== 
+==1258== 
+==1258== HEAP SUMMARY:
+==1258==     in use at exit: 0 bytes in 0 blocks
+==1258==   total heap usage: 204 allocs, 204 frees, 11,304 bytes allocated
+==1258== 
+==1258== All heap blocks were freed -- no leaks are possible
+==1258== 
+==1258== For counts of detected and suppressed errors, rerun with: -v
+==1258== Use --track-origins=yes to see where uninitialised values come from
+==1258== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 0 from 0)
 
-Overall Grade: C
+Overall Grade: B

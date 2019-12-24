@@ -1,4 +1,4 @@
-Grading at Tue Dec 24 07:31:16 UTC 2019
+Grading at Tue Dec 24 08:48:47 UTC 2019
 Compiling deck.c -> deck.o
 Compiling eval.c -> eval.o
 Compiling cards.c -> cards.o
@@ -10,249 +10,156 @@ Testing add_card_to(deck_t *, card_t)
 Testing add_empty_card(deck_t *)
 - Test passed
 Testing make_deck_exclude(deck_t *)
-Expected deck: Ks Kh Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Expected deck: Ks Kh Kd Kc Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc 
-Expected deck: Ks Kh Kd Kc As Ah 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd 2c 3c 4c 5c 6c 7c 8c 9c 0c 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks Ah 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 3c 4c 5c 6c 7c 8c 9c 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 3c 4c 5c 6c 7c 8c 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 5s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 4c 5c 6c 7c 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 5c 6c 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 4s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 4s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 4s 5s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 8d 9d 0d Jd Qd Kd Ac 2c 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 4s 5s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 9d 0d Jd Qd Kd Ac 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 4s 5s 6s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 0h Jh Qh Kh Ad 2d 3d 4d 5d 0d Jd Qd Kd 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 4s 5s 6s Js Qs Ks Ah 2h 3h 4h 5h 6h Jh Qh Kh Ad 2d 3d 4d 5d 6d 0d Jd Qd 
-Expected deck: Ks Kh Kd Kc As Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h Jh Jd Jc Qs Qh Qd Qc 
-Your deck: As 2s 3s 4s 5s 6s 7s Qs Ks Ah 2h 3h 4h 5h 6h 7h Jh Qh Kh Ad 2d 3d 4d 5d 6d Jd 
+tester: cards.c:136: card_from_num: Assertion `0 <= c && c < 52' failed.
+timeout: the monitored command dumped core
 Valgrind reported errors:
-==267== Memcheck, a memory error detector
-==267== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==267== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==267== Command: ./tester mde
-==267== Parent PID: 266
-==267== 
-==267== Conditional jump or move depends on uninitialised value(s)
-==267==    at 0x4C2FD0C: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==267==    by 0x401EE6: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==267==    by 0x402056: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
-==267==    by 0x40363C: check_make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
-==267==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==267== 
-==267== 
-==267== HEAP SUMMARY:
-==267==     in use at exit: 0 bytes in 0 blocks
-==267==   total heap usage: 2,239 allocs, 2,239 frees, 127,352 bytes allocated
-==267== 
-==267== All heap blocks were freed -- no leaks are possible
-==267== 
-==267== For counts of detected and suppressed errors, rerun with: -v
-==267== Use --track-origins=yes to see where uninitialised values come from
-==267== ERROR SUMMARY: 16 errors from 1 contexts (suppressed: 0 from 0)
+==422== Memcheck, a memory error detector
+==422== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==422== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==422== Command: ./tester mde
+==422== Parent PID: 421
+==422== 
+==422== Conditional jump or move depends on uninitialised value(s)
+==422==    at 0x4C2FD0C: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==422==    by 0x401EE6: add_card_to (in /graderhome/work/c4prj1_deck/tester)
+==422==    by 0x402063: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==422==    by 0x40364C: check_make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==422==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==422== 
+==422== 
+==422== Process terminating with default action of signal 6 (SIGABRT): dumping core
+==422==    at 0x4E6F428: raise (raise.c:54)
+==422==    by 0x4E71029: abort (abort.c:89)
+==422==    by 0x4E67BD6: __assert_fail_base (assert.c:92)
+==422==    by 0x4E67C81: __assert_fail (assert.c:101)
+==422==    by 0x402486: card_from_num (in /graderhome/work/c4prj1_deck/tester)
+==422==    by 0x402034: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==422==    by 0x40364C: check_make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==422==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==422== 
+==422== HEAP SUMMARY:
+==422==     in use at exit: 2,080 bytes in 132 blocks
+==422==   total heap usage: 208 allocs, 76 frees, 24,454 bytes allocated
+==422== 
+==422== LEAK SUMMARY:
+==422==    definitely lost: 0 bytes in 0 blocks
+==422==    indirectly lost: 0 bytes in 0 blocks
+==422==      possibly lost: 0 bytes in 0 blocks
+==422==    still reachable: 2,080 bytes in 132 blocks
+==422==         suppressed: 0 bytes in 0 blocks
+==422== Rerun with --leak-check=full to see details of leaked memory
+==422== 
+==422== For counts of detected and suppressed errors, rerun with: -v
+==422== Use --track-origins=yes to see where uninitialised values come from
+==422== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 Testing build_remaining_deck(deck_t **, size_t)
+tester: cards.c:136: card_from_num: Assertion `0 <= c && c < 52' failed.
 Testing with 1 hand
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2s 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 4s 5s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 5s 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 5c 6c 7c 8c 9c 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 6s 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 5c 6c 7c 8c 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 7s 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 5c 6c 7c 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 8s 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 5c 6c 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 9s 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 5c 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Testing with 2 hands
-Expected deck: 0s Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 4c 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: Js Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 3c 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: Qs Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 2c 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: Ks Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ac 
-Your deck: Ks Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: Ah 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd 
-Your deck: Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd 
-Your deck: Kh Kd Kc Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 0d 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Testing with 3 hands
-Expected deck: 5h 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 9d 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 6h 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 8d 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 7h 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 7d 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 8h 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 6d 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 9h 0h Jh Qh Kh Ad 2d 3d 4d 5d 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 0h Jh Qh Kh Ad 2d 3d 4d 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: Jh Qh Kh Ad 2d 3d 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: Qh Kh Ad 2d 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qh Qd Qc 
-Testing with 4 hands
-Expected deck: Kh Ad 
-Your deck: Kh Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4c 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4c 5c 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Testing with 5 hands
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4c 5c 6c 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4c 5c 6c 7c 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4c 5c 6c 7c 8c 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jd Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qd Qc 
-Expected deck: 
-Your deck: Kd Kc Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Expected deck: 
-Your deck: Kc Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Expected deck: 
-Your deck: Kc 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Testing with 6 hands
-Expected deck: 
-Your deck: Kc 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Expected deck: 
-Your deck: Kc 4c 5c 6c 7c 8c 9c 0c Jc Qc 
+timeout: the monitored command dumped core
 Valgrind reported errors:
-==271== Memcheck, a memory error detector
-==271== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==271== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==271== Command: ./tester brd
-==271== Parent PID: 270
-==271== 
-==271== Conditional jump or move depends on uninitialised value(s)
-==271==    at 0x4C2FD0C: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==271==    by 0x401EE6: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==271==    by 0x402132: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==271==    by 0x40329C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==271==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==271== 
-==271== Conditional jump or move depends on uninitialised value(s)
-==271==    at 0x4C2FD0C: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==271==    by 0x401EE6: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==271==    by 0x402056: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
-==271==    by 0x40217F: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==271==    by 0x40329C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==271==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==271== 
-==271== Conditional jump or move depends on uninitialised value(s)
-==271==    at 0x4C2EDA1: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==271==    by 0x403410: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==271==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==271== 
-==271== 
-==271== HEAP SUMMARY:
-==271==     in use at exit: 15,120 bytes in 987 blocks
-==271==   total heap usage: 6,596 allocs, 5,609 frees, 353,960 bytes allocated
-==271== 
-==271== LEAK SUMMARY:
-==271==    definitely lost: 672 bytes in 42 blocks
-==271==    indirectly lost: 14,448 bytes in 945 blocks
-==271==      possibly lost: 0 bytes in 0 blocks
-==271==    still reachable: 0 bytes in 0 blocks
-==271==         suppressed: 0 bytes in 0 blocks
-==271== Rerun with --leak-check=full to see details of leaked memory
-==271== 
-==271== For counts of detected and suppressed errors, rerun with: -v
-==271== Use --track-origins=yes to see where uninitialised values come from
-==271== ERROR SUMMARY: 84 errors from 3 contexts (suppressed: 0 from 0)
+==426== Memcheck, a memory error detector
+==426== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==426== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==426== Command: ./tester brd
+==426== Parent PID: 425
+==426== 
+==426== Conditional jump or move depends on uninitialised value(s)
+==426==    at 0x4C2FD0C: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==426==    by 0x401EE6: add_card_to (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x402149: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x4032AC: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==426== 
+==426== Conditional jump or move depends on uninitialised value(s)
+==426==    at 0x4C2FD0C: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==426==    by 0x401EE6: add_card_to (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x402063: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x402196: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x4032AC: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==426== 
+==426== 
+==426== Process terminating with default action of signal 6 (SIGABRT): dumping core
+==426==    at 0x4E6F428: raise (raise.c:54)
+==426==    by 0x4E71029: abort (abort.c:89)
+==426==    by 0x4E67BD6: __assert_fail_base (assert.c:92)
+==426==    by 0x4E67C81: __assert_fail (assert.c:101)
+==426==    by 0x402486: card_from_num (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x402034: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x402196: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x4032AC: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==426==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==426== 
+==426== HEAP SUMMARY:
+==426==     in use at exit: 976 bytes in 66 blocks
+==426==   total heap usage: 121 allocs, 55 frees, 16,270 bytes allocated
+==426== 
+==426== LEAK SUMMARY:
+==426==    definitely lost: 0 bytes in 0 blocks
+==426==    indirectly lost: 0 bytes in 0 blocks
+==426==      possibly lost: 0 bytes in 0 blocks
+==426==    still reachable: 976 bytes in 66 blocks
+==426==         suppressed: 0 bytes in 0 blocks
+==426== Rerun with --leak-check=full to see details of leaked memory
+==426== 
+==426== For counts of detected and suppressed errors, rerun with: -v
+==426== Use --track-origins=yes to see where uninitialised values come from
+==426== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Testing get_match_count(deck_t *)
 In this hand: Ac 
   I expected the 0'th match count to be 1 but you got 0
 Valgrind reported errors:
-==275== Memcheck, a memory error detector
-==275== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==275== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==275== Command: ./tester gmc
-==275== Parent PID: 274
-==275== 
-==275== Conditional jump or move depends on uninitialised value(s)
-==275==    at 0x402EFB: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==275==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==275== 
-==275== Use of uninitialised value of size 8
-==275==    at 0x4E8476B: _itoa_word (_itoa.c:179)
-==275==    by 0x4E8812C: vfprintf (vfprintf.c:1631)
-==275==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==275==    by 0x402ED9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==275==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==275== 
-==275== Conditional jump or move depends on uninitialised value(s)
-==275==    at 0x4E84775: _itoa_word (_itoa.c:179)
-==275==    by 0x4E8812C: vfprintf (vfprintf.c:1631)
-==275==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==275==    by 0x402ED9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==275==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==275== 
-==275== Conditional jump or move depends on uninitialised value(s)
-==275==    at 0x4E881AF: vfprintf (vfprintf.c:1631)
-==275==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==275==    by 0x402ED9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==275==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==275== 
-==275== Conditional jump or move depends on uninitialised value(s)
-==275==    at 0x4E87C59: vfprintf (vfprintf.c:1631)
-==275==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==275==    by 0x402ED9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==275==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==275== 
-==275== Conditional jump or move depends on uninitialised value(s)
-==275==    at 0x4E87CE2: vfprintf (vfprintf.c:1631)
-==275==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
-==275==    by 0x402ED9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==275==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==275== 
-==275== 
-==275== HEAP SUMMARY:
-==275==     in use at exit: 0 bytes in 0 blocks
-==275==   total heap usage: 204 allocs, 204 frees, 11,304 bytes allocated
-==275== 
-==275== All heap blocks were freed -- no leaks are possible
-==275== 
-==275== For counts of detected and suppressed errors, rerun with: -v
-==275== Use --track-origins=yes to see where uninitialised values come from
-==275== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 0 from 0)
+==430== Memcheck, a memory error detector
+==430== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==430== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==430== Command: ./tester gmc
+==430== Parent PID: 429
+==430== 
+==430== Conditional jump or move depends on uninitialised value(s)
+==430==    at 0x402F0B: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==430==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==430== 
+==430== Use of uninitialised value of size 8
+==430==    at 0x4E8476B: _itoa_word (_itoa.c:179)
+==430==    by 0x4E8812C: vfprintf (vfprintf.c:1631)
+==430==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==430==    by 0x402EE9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==430==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==430== 
+==430== Conditional jump or move depends on uninitialised value(s)
+==430==    at 0x4E84775: _itoa_word (_itoa.c:179)
+==430==    by 0x4E8812C: vfprintf (vfprintf.c:1631)
+==430==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==430==    by 0x402EE9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==430==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==430== 
+==430== Conditional jump or move depends on uninitialised value(s)
+==430==    at 0x4E881AF: vfprintf (vfprintf.c:1631)
+==430==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==430==    by 0x402EE9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==430==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==430== 
+==430== Conditional jump or move depends on uninitialised value(s)
+==430==    at 0x4E87C59: vfprintf (vfprintf.c:1631)
+==430==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==430==    by 0x402EE9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==430==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==430== 
+==430== Conditional jump or move depends on uninitialised value(s)
+==430==    at 0x4E87CE2: vfprintf (vfprintf.c:1631)
+==430==    by 0x4F509EE: __printf_chk (printf_chk.c:35)
+==430==    by 0x402EE9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
+==430==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
+==430== 
+==430== 
+==430== HEAP SUMMARY:
+==430==     in use at exit: 0 bytes in 0 blocks
+==430==   total heap usage: 204 allocs, 204 frees, 11,304 bytes allocated
+==430== 
+==430== All heap blocks were freed -- no leaks are possible
+==430== 
+==430== For counts of detected and suppressed errors, rerun with: -v
+==430== Use --track-origins=yes to see where uninitialised values come from
+==430== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 0 from 0)
 
 Overall Grade: F

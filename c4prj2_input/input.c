@@ -7,25 +7,27 @@
 deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   deck_t* d = malloc(sizeof(deck_t));
   d->cards = NULL;
+  d->n_cards = 0;
   card_t c = {.value = 0, .suit = 0};
-  int numcards = 0;
   int j = 0;
   char* card = malloc(2 * sizeof(char));
   for (int i = 0; i < strlen(str); i++) {
     if (str[i] != ' ') {
       card[j] = str[i];
       j++;
-    } else {
+    }
+    else {
       j = 0;
+      c = card_from_letters(card[0], card[1]);
       if (c.suit != NUM_SUITS) {
-	numcards++;
-	d->cards = realloc(d->cards, numcards * sizeof(card_t));
-	c = card_from_letters(card[0], card[1]);
-	d->cards[numcards - 1]->suit = c.suit;
-	d->cards[numcards - 1]->value = c.value;
-      } else {
+	d->n_cards++;
+	d->cards = realloc(d->cards, d->n_cards * sizeof(card_t));
+	d->cards[d->n_cards - 1]->suit = c.suit;
+	d->cards[d->n_cards - 1]->value = c.value;
+      }
+      else {
 	add_empty_card(d);
-	add_future_card(fc, (size_t)card[0] , d->cards[d->n_cards - 1]);
+	add_future_card(fc, (size_t)card[0], d->cards[d->n_cards - 1]);
       }
     }
   }

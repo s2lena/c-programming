@@ -21,11 +21,7 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
       j = 0;
       c = card_from_letters(card[0], card[1]);
       if (c.suit != NUM_SUITS) {
-	d->n_cards++;
-	d->cards = realloc(d->cards, d->n_cards * sizeof(card_t));
-	d->cards[d->n_cards - 1] = malloc(sizeof(card_t));
-	d->cards[d->n_cards - 1]->suit = c.suit;
-	d->cards[d->n_cards - 1]->value = c.value;
+	add_card_to(d, c);
       }
       else {
 	size_t i = card[1] - '0';

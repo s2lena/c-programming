@@ -28,7 +28,7 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
       }
       else {
 	size_t i = card[1] - '0';
-	card_t * empty = add_empty_card(d);
+	card_t* empty = add_empty_card(d);
 	add_future_card(fc, i, empty);
       }
     }

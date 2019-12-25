@@ -31,6 +31,7 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
       }
     }
     if ((i + 1) == strlen(str)) {
+      card_in_hand++;
       c = card_from_letters(card[0], card[1]);
       add_card_to(d, c);
       break;

@@ -46,6 +46,10 @@ deck_t** read_input(FILE* f, size_t* n_hands, future_cards_t* fc) {
   char* curr = NULL;
   size_t sz = 0;
   while (getline(&curr, &sz, f) >= 0) {
+    char* p = strchr(curr, '\n');
+    if (p != NULL) {
+      *p = '\0';
+    }
     lines++;
     arr_hand = realloc(arr_hand, lines * sizeof(deck_t*));
     arr_hand[lines - 1] = malloc(sizeof(deck_t));

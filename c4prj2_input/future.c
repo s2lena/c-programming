@@ -27,6 +27,7 @@ void future_cards_from_deck(deck_t* deck, future_cards_t* fc) {
     return;
   }
   if (fc->n_decks == 0) {
+    perror("No future card\n");
     return;
   }
   for (int i = 0; i < deck->n_cards; i++) {

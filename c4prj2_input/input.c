@@ -6,8 +6,9 @@
 
 deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   deck_t* d = malloc(sizeof(deck_t));
-  d->cards = NULL; int card_in_hand = 0;
+  d->cards = NULL;
   d->n_cards = 0;
+  int card_in_hand = 0;
   card_t c = {.value = 0, .suit = 0};
   int j = 0;
   char* card = malloc(2 * sizeof(char));
@@ -37,6 +38,7 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   free(card);
   return d;
 }
+
 
 deck_t** read_input(FILE* f, size_t* n_hands, future_cards_t* fc) {
   deck_t** arr_hand = malloc(sizeof(deck_t *));

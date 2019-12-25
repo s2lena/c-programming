@@ -7,7 +7,7 @@
 deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   deck_t* d = malloc(sizeof(deck_t));
   d->cards = malloc(sizeof(card_t));
-  d->n_cards = 0;
+  d->n_cards = 0;int card_in_hand = 0;
   card_t c = {.value = 0, .suit = 0};
   int j = 0;
   char* card = malloc(2 * sizeof(char));
@@ -31,6 +31,10 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
 	add_future_card(fc, (size_t)card[1], d->cards[d->n_cards - 1]);
       }
     }
+  }
+  if (card_in_hand < 5) {
+    perror("Not enough cards in hand\n");
+    return NULL;
   }
   free(card);
   return d;

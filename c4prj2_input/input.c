@@ -6,7 +6,7 @@
 
 deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   deck_t* d = malloc(sizeof(deck_t));
-  d->cards = malloc(sizeof(card_t));
+  d->cards = NULL;
   d->n_cards = 0;
   card_t c = {.value = 0, .suit = 0};
   int j = 0;

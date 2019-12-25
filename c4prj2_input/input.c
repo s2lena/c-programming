@@ -27,10 +27,9 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
 	d->cards[d->n_cards - 1]->value = c.value;
       }
       else {
-	card_t * empty = malloc(sizeof(card_t));
-	empty = add_empty_card(d);
-	add_future_card(fc,(size_t)card[1], empty);
-	free(empty);
+	size_t i = card[1] - '0';
+	card_t * empty = add_empty_card(d);
+	add_future_card(fc, i, empty);
       }
     }
   }

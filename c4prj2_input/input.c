@@ -36,7 +36,7 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   }
   if (card_in_hand < 5) {
     perror("Failed\n");
-    exit(NULL);
+    return NULL;
   }
   free(card);
   return d;

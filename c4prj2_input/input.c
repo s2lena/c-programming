@@ -11,8 +11,8 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   card_t c = {.value = 0, .suit = 0};
   int j = 0;
   char* card = malloc(2 * sizeof(char));
-  for (int i = 0; i <= strlen(str) + 1; i++) {
-    if (str[i] != ' ' && i != (strlen(str) + 1)) {
+  for (int i = 0; i <= strlen(str); i++) {
+    if (str[i] != ' ' && i != strlen(str)) {
       card[j] = str[i];
       j++;
     }

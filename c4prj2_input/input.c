@@ -8,34 +8,34 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   deck_t* d = malloc(sizeof(deck_t));
   d->cards = NULL;
   d->n_cards = 0;
-  card_t c = {.value = 0, .suit = 0};
-  int j = 0;
-  char* card = malloc(2 * sizeof(char));
-  for (int i = 0; i <= strlen(str); i++) {
-    if (str[i] != ' ' && i != strlen(str)) {
-      card[j] = str[i];
-      j++;
+  for (int i = 0; i < strlen(str); i++) {
+    if (isspace(str[i])) {
+      continue;
+    }
+    if (str[i] == '?' && isdigit(str[i + 1]) != 0) {
+      char num[5];
+      int j = 0;
+      i++;
+      while (isdigit(str[i])) {
+	num[j] = str[i];
+	j++; i++;
+      }
+      num[j] ='\0';
+      size_t idx = strtoul(num, NULL, 0);
+      add_future_card(fc, idx, add_empty_card(d));
     }
     else {
-      j = 0;
-      c = card_from_letters(card[0], card[1]);
-      if (c.suit != NUM_SUITS) {
-	add_card_to(d, c);
-      }
-      else {
-	size_t i = card[1] - '0';
-	add_future_card(fc, i, add_empty_card(d));
-      }
+      card_t c = card_from_letters(str[i], str[i + 1]);
+      add_card_to(d, c);
+      i++;
     }
   }
   if (d->n_cards < 5) {
     perror("Failed\n");
     return NULL;
   }
-  free(card);
   return d;
 }
-
 
 deck_t** read_input(FILE* f, size_t* n_hands, future_cards_t* fc) {
   deck_t** arr_hand = malloc(sizeof(deck_t *));

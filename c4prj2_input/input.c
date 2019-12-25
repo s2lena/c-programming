@@ -27,10 +27,11 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
       }
       else {
 	add_empty_card(d);
-	add_future_card(fc, (size_t)card[0], d->cards[d->n_cards - 1]);
+	add_future_card(fc, (size_t)card[1], d->cards[d->n_cards - 1]);
       }
     }
   }
+  free(card);
   return d;
 }
 

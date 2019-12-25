@@ -6,7 +6,7 @@
 
 deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   deck_t* d = malloc(sizeof(deck_t));
-  d->cards = NULL;
+  d->cards = NULL;int card_in_hand = 0;
   d->n_cards = 0;
   card_t c = {.value = 0, .suit = 0};
   int j = 0;
@@ -17,6 +17,7 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
       j++;
     }
     else {
+      card_in_hand++;
       j = 0;
       c = card_from_letters(card[0], card[1]);
       if (c.suit != NUM_SUITS) {
@@ -32,6 +33,10 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
 	add_future_card(fc, i, empty);
       }
     }
+  }
+  if (card_in_hand < 5) {
+    perror("Failed\n");
+    exit(NULL);
   }
   free(card);
   return d;

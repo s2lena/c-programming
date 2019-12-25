@@ -26,14 +26,13 @@ void future_cards_from_deck(deck_t* deck, future_cards_t* fc) {
     perror("Failed\n");
     return;
   }
-  if (fc->n_decks == 0) {
-    perror("No future card\n");
-    return;
-  }
   for (int i = 0; i < deck->n_cards; i++) {
-    for (int j = 0; j < fc->decks[i].n_cards; i++) {
-      fc->decks[i].cards[j]->value = deck->cards[i]->value;
-      fc->decks[i].cards[j]->suit = deck->cards[i]->suit;
+    if (fc->decks[i].cards == NULL || fc->decks[i].n_cards = 0) {
+      continue;
+    }
+    for (int k = 0; k <fc->decks[i].n_cards; k++) {
+      fc->decks[i].cards[k]->value = deck->cards[i]->value;
+      fc->decks[i].cards[k]->suit = deck->cards[i]->suit;
     }
   }
 }

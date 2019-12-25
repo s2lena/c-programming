@@ -6,14 +6,13 @@
 
 deck_t* hand_from_string(const char* str, future_cards_t* fc) {
   deck_t* d = malloc(sizeof(deck_t));
-  d->cards = NULL;
-  int card_in_hand = 0;
+  d->cards = NULL; int card_in_hand = 0;
   d->n_cards = 0;
   card_t c = {.value = 0, .suit = 0};
   int j = 0;
   char* card = malloc(2 * sizeof(char));
-  for (int i = 0; i < strlen(str); i++) {
-    if (str[i] != ' ') {
+  for (int i = 0; i <= strlen(str); i++) {
+    if (str[i] != ' ' && i != strlen(str)) {
       card[j] = str[i];
       j++;
     }
@@ -29,12 +28,6 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
 	card_t* empty = add_empty_card(d);
 	add_future_card(fc, i, empty);
       }
-    }
-    if ((i + 1) == strlen(str)) {
-      card_in_hand++;
-      c = card_from_letters(card[0], card[1]);
-      add_card_to(d, c);
-      break;
     }
   }
   if (card_in_hand < 5) {

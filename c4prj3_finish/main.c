@@ -64,7 +64,7 @@ int main(int argc, char** argv) {
 
   // print the win rate of each hand
   for (size_t i = 0; i < n_hands; i++) {
-    printf("Hand %zu won %u / %u n_trials (%.2f%%)\n", i, win_arr[i], n_trials,
+    printf("Hand %zu won %u / %u times (%.2f%%)\n", i, win_arr[i], n_trials,
 	   (float) win_arr[i] / n_trials * 100);
   }
   printf("And there were %u ties\n", win_arr[n_hands]);

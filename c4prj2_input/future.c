@@ -22,10 +22,6 @@ void add_future_card(future_cards_t* fc, size_t index, card_t* ptr) {
 }
 
 void future_cards_from_deck(deck_t* deck, future_cards_t* fc) {
-  if (deck->n_cards != fc->n_decks) {
-    perror("Failed\n");
-    return;
-  }
   for (int i = 0; i < deck->n_cards; i++) {
     if (fc->decks[i].cards == NULL || fc->decks[i].n_cards == 0) {
       continue;

@@ -19,13 +19,13 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
       i++;
       while (isdigit(str[i])) {
 	num[j] = str[i];
-	j++; i++;
+	j++;
+	i++;
       }
-      num[j] ='\0';
+      num[j] = '\0';
       size_t idx = strtoul(num, NULL, 0);
       add_future_card(fc, idx, add_empty_card(d));
-    }
-    else {
+    } else {
       card_t c = card_from_letters(str[i], str[i + 1]);
       add_card_to(d, c);
       i++;
@@ -39,7 +39,7 @@ deck_t* hand_from_string(const char* str, future_cards_t* fc) {
 }
 
 deck_t** read_input(FILE* f, size_t* n_hands, future_cards_t* fc) {
-  deck_t** arr_hand = malloc(sizeof(deck_t *));
+  deck_t** arr_hand = malloc(sizeof(deck_t*));
   size_t lines = 0;
   char* curr = NULL;
   size_t sz = 0;
@@ -50,7 +50,6 @@ deck_t** read_input(FILE* f, size_t* n_hands, future_cards_t* fc) {
     }
     lines++;
     arr_hand = realloc(arr_hand, lines * sizeof(deck_t*));
-    arr_hand[lines - 1] = malloc(sizeof(deck_t));
     arr_hand[lines - 1] = hand_from_string(curr, fc);
     free(curr);
     curr = NULL;

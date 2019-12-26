@@ -22,13 +22,12 @@ void add_future_card(future_cards_t* fc, size_t index, card_t* ptr) {
 }
 
 void future_cards_from_deck(deck_t* deck, future_cards_t* fc) {
-  for (int i = 0; i < deck->n_cards; i++) {
-    if (fc->decks[i].cards == NULL || fc->decks[i].n_cards == 0) {
+  for (size_t i = 0; i < fc->n_decks; i++) {
+    if (fc->decks[i].n_cards == 0) {
       continue;
     }
-    for (int k = 0; k <fc->decks[i].n_cards; k++) {
-      fc->decks[i].cards[k]->value = deck->cards[i]->value;
-      fc->decks[i].cards[k]->suit = deck->cards[i]->suit;
+    for (size_t j = 0; j < fc->decks[i].n_cards; j++) {
+      *fc->decks[i].cards[j] = *deck->cards[i];
     }
   }
 }

@@ -3,21 +3,21 @@
 #include <assert.h>
 #include "deck.h"
 
-void print_hand(deck_t * hand){
-  deck_t hands = * hand;
+void print_hand(deck_t* hand) {
+  deck_t hands = *hand;
   size_t handSize = hand->n_cards;
   for (int i = 0; i <= (handSize - 1); i++) {
-    card_t c = * (hands.cards[i]);
+    card_t c = *(hands.cards[i]);
     print_card(c);
     printf(" ");
   }
 }
 
-int deck_contains(deck_t * d, card_t c) {
+int deck_contains(deck_t* d, card_t c) {
   size_t n = d->n_cards;
-  deck_t decks = * d;
+  deck_t decks = *d;
   for (size_t i = 0; i < n; i++) {
-    card_t check = * (decks.cards[i]);
+    card_t check = *(decks.cards[i]);
     if (check.value == c.value) {
       if (check.suit == c.suit) {
 	return 1;
@@ -27,23 +27,23 @@ int deck_contains(deck_t * d, card_t c) {
   return 0;
 }
 
-void shuffle(deck_t * d){
+void shuffle(deck_t* d) {
   size_t n = d->n_cards;
-  card_t ** ptr = d->cards;
+  card_t** ptr = d->cards;
   for (int i = 0; i <= n - 1; i++) {
-    int k = rand()%((n - 1) - 0 + 1) + 0;
-    card_t ** ptr1 = ptr + k;
-    card_t ** ptr2 = ptr + i;
-    card_t * temp = * ptr1;
+    int k = rand() % ((n - 1) - 0 + 1) + 0;
+    card_t** ptr1 = ptr + k;
+    card_t** ptr2 = ptr + i;
+    card_t* temp = *ptr1;
     *ptr1 = *ptr2;
     *ptr2 = temp;
-  } 
+  }
 }
 
-void assert_full_deck(deck_t * d) {
+void assert_full_deck(deck_t* d) {
   for (int i = 0; i <= ((d->n_cards) - 1); i++) {
-  assert((d->cards[i]->value) >= 2 || (d->cards[i]->value) <= 14);
-  assert((d->cards[i]->suit) >= 0 || (d->cards[i]->suit) <= 3);
+    assert((d->cards[i]->value) >= 2 || (d->cards[i]->value) <= 14);
+    assert((d->cards[i]->suit) >= 0 || (d->cards[i]->suit) <= 3);
   }
 }
 
@@ -68,13 +68,14 @@ card_t* add_empty_card(deck_t* deck) {
 }
 
 deck_t* make_deck_exclude(deck_t* excluded_cards) {
-  deck_t * d = malloc(sizeof(deck_t));
+  deck_t* d = malloc(sizeof(deck_t));
   d->cards = malloc(sizeof(card_t));
-  d->n_cards = 0; card_t c = {.value = 0, .suit = 0};
+  d->n_cards = 0;
+  card_t c = {.value = 0, .suit = 0};
   for (int i = 0; i < 13; i++) {
     for (int j = 0; j < 4; j++) {
       c = card_from_num(i + (13 * j));
-      if (deck_contains(excluded_cards, c) == 1){
+      if (deck_contains(excluded_cards, c) == 1) {
 	continue;
       }
       add_card_to(d, c);
@@ -83,8 +84,8 @@ deck_t* make_deck_exclude(deck_t* excluded_cards) {
   return d;
 }
 
-deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
-  deck_t * excluded = malloc(sizeof(deck_t));
+deck_t* build_remaining_deck(deck_t** hands, size_t n_hands) {
+  deck_t* excluded = malloc(sizeof(deck_t));
   excluded->cards = malloc(sizeof(card_t));
   excluded->n_cards = 0;
   for (int i = 0; i < n_hands; i++) {
@@ -95,11 +96,12 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
       add_card_to(excluded, c);
     }
   }
-  deck_t * d = make_deck_exclude(excluded);
+  deck_t* d = make_deck_exclude(excluded);
+  free_deck(excluded);
   return d;
 }
 
-void free_deck(deck_t * deck) {
+void free_deck(deck_t* deck) {
   for (int i = 0; i < deck->n_cards; i++) {
     free(deck->cards[i]);
   }
